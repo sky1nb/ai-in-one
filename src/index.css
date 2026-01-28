@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.022em;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'liga', 'kern', 'calt';
+  background: #000000;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+/* Ultra Minimal Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Minimal Selection */
+::selection {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+/* Webview Container */
+webview {
+  display: flex !important;
+  width: 100% !important;
+  height: 100% !important;
+  flex: 1 1 auto !important;
+  position: relative !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  background: #000000;
+}
+
+/* Minimal Button Reset */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+/* Focus States - Minimal */
+button:focus-visible,
+input:focus-visible {
+  outline: 1px solid rgba(255, 255, 255, 0.3);
+  outline-offset: 2px;
+}
+
+/* Minimal Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Pure Minimal Classes */
+.minimal-border {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.minimal-hover {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.minimal-hover:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.minimal-shadow {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Text Hierarchy - Minimal */
+.text-primary {
+  color: #ffffff;
+}
+
+.text-secondary {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.text-tertiary {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Spacing System - Minimal */
+.space-minimal {
+  padding: 4px;
+}
+
+.space-small {
+  padding: 8px;
+}
+
+.space-medium {
+  padding: 16px;
+}
+
+.space-large {
+  padding: 24px;
+}

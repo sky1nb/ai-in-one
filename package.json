@@ -1,0 +1,91 @@
+{
+  "name": "ai-in-one-v2",
+  "version": "2.0.0",
+  "description": "Premium AI Desktop Workstation - All-in-One AI Assistant",
+  "main": "dist-electron/main.js",
+  "author": "AI in One Team",
+  "license": "MIT",
+  "scripts": {
+    "start": "node scripts/kill-port.js && concurrently \"npm run dev\" \"wait-on http://localhost:5173 && electron .\"",
+    "dev": "vite",
+    "build": "tsc && vite build && electron-builder",
+    "build:store": "tsc && vite build && electron-builder --win appx",
+    "build:electron": "tsc -p tsconfig.electron.json",
+    "preview": "vite preview",
+    "electron:dev": "concurrently \"npm run dev\" \"wait-on http://localhost:5173 && electron .\"",
+    "kill-port": "npx kill-port 5173",
+    "electron:build": "npm run build:electron && electron-builder"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "framer-motion": "^10.16.16"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.16",
+    "concurrently": "^8.2.2",
+    "electron": "^28.2.0",
+    "electron-builder": "^24.9.1",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.8",
+    "wait-on": "^7.2.0"
+  },
+  "build": {
+    "appId": "com.aiinone.app",
+    "productName": "AI in One",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "dist-electron/**/*",
+      "assets/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "assets",
+        "to": "assets",
+        "filter": ["**/*"]
+      }
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        },
+        {
+          "target": "appx",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "assets/icon.ico",
+      "publisherName": "CN=60DBF2CE-BE91-4670-B450-6340B84FAD0D"
+    },
+    "appx": {
+      "backgroundColor": "#000000",
+      "displayName": "AI in One",
+      "publisherDisplayName": "sky1nb",
+      "identityName": "sky1nb.AiinOne",
+      "publisher": "CN=60DBF2CE-BE91-4670-B450-6340B84FAD0D",
+      "applicationId": "AiinOne",
+      "languages": ["en-US", "tr-TR"],
+      "addAutoLaunchExtension": false
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "assets/icon.icns"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "assets/icon.png"
+    }
+  }
+}
