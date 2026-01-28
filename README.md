@@ -131,7 +131,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## 🙏 Acknowledgments
 
 - Thanks to [OpenAI](https://openai.com), [Anthropic](https://anthropic.com), [Google](https://deepmind.google/technologies/gemini/), and [Perplexity](https://perplexity.ai) for their amazing AI platforms
-- Built with ❤️ using Electron
+- Built with  using Electron
 
 ---
 
@@ -149,7 +149,7 @@ Each AI service has its own terms of service and privacy policy:
 
 <div align="center">
   
-**Made with ❤️ by [sky1nb](https://github.com/sky1nb)**
+**Made with by [sky1nb](https://github.com/sky1nb)**
 
 ⭐ Star this repo if you find it useful!
 
