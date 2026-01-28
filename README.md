@@ -15,6 +15,7 @@
 - **Claude** - Anthropic's advanced AI assistant
 - **Gemini** - Google's multimodal AI
 - **Perplexity** - AI-powered search engine
+- **NotebookLM** - Research Tool & Thinking Partner 
 
 ### ⚡ Productivity Features
 - **Quick Switch** - Switch between AIs with `Ctrl+1-4`
