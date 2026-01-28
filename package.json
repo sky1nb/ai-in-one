@@ -1,6 +1,6 @@
 {
   "name": "ai-in-one-v2",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Premium AI Desktop Workstation - All-in-One AI Assistant",
   "main": "dist-electron/main.js",
   "author": "AI in One Team",
@@ -9,6 +9,7 @@
     "start": "node scripts/kill-port.js && concurrently \"npm run dev\" \"wait-on http://localhost:5173 && electron .\"",
     "dev": "vite",
     "build": "tsc && vite build && electron-builder",
+    "build:exe": "tsc && vite build && electron-builder --win nsis portable",
     "build:store": "tsc && vite build && electron-builder --win appx",
     "build:electron": "tsc -p tsconfig.electron.json",
     "preview": "vite preview",
@@ -40,7 +41,8 @@
     "appId": "com.aiinone.app",
     "productName": "AI in One",
     "directories": {
-      "output": "release"
+      "output": "release",
+      "buildResources": "build-assets"
     },
     "files": [
       "dist/**/*",
@@ -62,12 +64,26 @@
           "arch": ["x64"]
         },
         {
-          "target": "appx",
+          "target": "portable",
           "arch": ["x64"]
         }
       ],
       "icon": "assets/icon.ico",
-      "publisherName": "CN=60DBF2CE-BE91-4670-B450-6340B84FAD0D"
+      "publisherName": "sky1nb"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "AI in One",
+      "installerIcon": "assets/icon.ico",
+      "uninstallerIcon": "assets/icon.ico",
+      "license": "LICENSE",
+      "warningsAsErrors": false
+    },
+    "portable": {
+      "artifactName": "AI-in-One-${version}-Portable.exe"
     },
     "appx": {
       "backgroundColor": "#000000",
