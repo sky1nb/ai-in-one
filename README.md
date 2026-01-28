@@ -51,6 +51,7 @@ Coming soon to the Microsoft Store!
 | `Ctrl+2` | Switch to Claude |
 | `Ctrl+3` | Switch to Gemini |
 | `Ctrl+4` | Switch to Perplexity |
+| `Ctrl+5` | Switch to NotebookLM |
 | `Ctrl+P` | Open Prompt Library |
 | `Ctrl+Shift+P` | Toggle Always on Top |
 
