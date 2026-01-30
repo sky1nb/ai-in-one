@@ -1,6 +1,6 @@
 # 🚀 AI in One
 
-**All-in-One AI Desktop Application** - Access ChatGPT, Claude, Gemini & Perplexity in one beautiful, native Windows application.
+**All-in-One AI Desktop Application** - Access ChatGPT, Claude, Gemini, Perplexity, NotebookLM in one, native Windows application.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Platform](https://img.shields.io/badge/platform-Windows-blue.svg)](https://www.microsoft.com/store)
